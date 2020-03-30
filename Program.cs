@@ -88,8 +88,8 @@ namespace Project1
             }
 
                     {
-            Console.WriteLine("------------------ Задача 3.3 --------------------------");
-            Console.WriteLine("Нарисовать равносторонний треугольник: \n");
+            Console.WriteLine("------------------ Задача 3.4 --------------------------");
+            Console.WriteLine("Нарисовать ромб: \n");
             int i, j;
             int h, m = 20;
             h = m / 2 + 1;
@@ -113,6 +113,20 @@ namespace Project1
                 }
                 Console.Write("\n");
             }
+            }
+
+            {
+                Console.WriteLine("------------------ Задача 4 --------------------------");
+                int k = 0;
+                Console.Write("Введите процент P = ");
+                double p = double.Parse(Console.ReadLine());
+                double init_sum = 1000, max_sum = 1100;  
+                do {
+                    init_sum += init_sum * (p/100);
+                    k++;
+                }
+                while(init_sum <= max_sum);
+                Console.WriteLine($"Через {k} месяцев, размер вклада составит {Math.Round(init_sum,3)} рублей");               
             }
             Console.ReadKey();
         }
